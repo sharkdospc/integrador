@@ -1,0 +1,233 @@
+a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+
+
+a:hover {
+  opacity: 0.7;
+}
+
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: system-ui,system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+.terror{
+  position: fixed;
+  width: 100vw; /* Largura total */
+  height: 100vh; /* Altura total */
+  z-index: -5;
+  background-size: cover; /* Ajusta a imagem para cobrir tudo */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Evita repetições */
+}
+.terror img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Garante que a imagem cubra tudo sem distorcer */
+}
+
+
+body {
+  background-color: rgb(23, 0, 38);
+  background-image: url('./imagens/esc.png');
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-size: cover; /* Faz o fundo cobrir toda a tela */
+  background-repeat: no-repeat; /* Evita repetição da imagem */
+  background-position: center; /* Centraliza a imagem */
+  background-attachment: fixed; /* Mantém o fundo fixo ao rolar a página */
+  margin: 0; /* Remove margens da página */
+  padding: 0; /* Remove espaçamentos extras */
+  height: 100vh; /* Garante que o fundo tenha 100% da altura da viewport */
+  width: 100vw; /* Garante que o fundo tenha 100% da largura da viewport */
+  display: block;
+}
+
+
+
+.header {
+    
+    background-color: rgba(84, 84, 84, 0.108); /* Cor de fundo semitransparente */
+    color: rgb(255, 255, 255); /* Cor do texto */
+    padding: 10px; /* Espaçamento interno */
+    position: fixed; /* Fixa o elemento na viewport */
+    top: 0; /* Posiciona na parte superior */
+    width: 100%; /* Largura total */
+    height: 60px; /* Altura apropriada */
+   
+}
+
+
+
+.elemento {
+  left: 500px;
+  top: -5px;
+  width: 500px;
+  cursor: pointer;
+  transform: translate(-70%, 70%); /* Ajusta a posição inicial */
+  transition: transform 0.4s ease; /* Suaviza a animação aumentando o tempo */
+  position: fixed;
+    display: block;
+   
+}
+.elemento:hover {
+  transform: scale(1.5) translate(-30%, 60%); /* Mantém a posição vertical no "hover" */
+}
+
+
+@media (max-width: 768px) { /* Ajuste o valor conforme necessário */
+  .imagem-container {
+    display: none;
+  }
+}
+
+
+
+
+
+
+.imagem-container {
+  background-color: #10101081;
+  box-shadow: 0 0 100px #000000;
+  position: fixed;
+  display: block;
+  width: 10vw; /* Largura baseada na viewport */
+  height: 25vh; /* Altura baseada na viewport */
+  max-width: fit-content;
+  max-height: fit-content;
+}
+
+
+.imagem-container.one {
+  top: 30%;
+  left: 65%;
+  cursor: pointer;
+}
+
+.imagem-container.two {
+  top: 35%;
+  left: 55%;
+  cursor: pointer;
+}
+
+.imagem-container.three {
+  top: 35%;
+  left: 75%;
+  cursor: pointer;
+}
+
+
+ 
+
+footer {
+    color: #ffffff92;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+  }
+  
+  .example-2 {
+    position: fixed;
+    bottom: 5px; 
+    left: 20px; 
+    display: flex;
+    justify-content: center;
+}
+
+
+  .example-2 .icon-content {
+    margin: 0 10px;
+    position: relative;
+  }
+  .example-2 .icon-content .tooltip {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffff;
+    padding: 6px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+  .example-2 .icon-content:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    top: -50px;
+  }
+  .example-2 .icon-content a {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #ffffff;
+    background-color: #ffffff1d;
+    transition: all 0.3s ease-in-out;
+  }
+  .example-2 .icon-content a:hover {
+    box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+  }
+  .example-2 .icon-content a svg {
+    position: relative;
+    z-index: 1;
+    width: 20px;
+    height: 20px;
+  }
+  .example-2 .icon-content a:hover {
+    color: white;
+  }
+  .example-2 .icon-content a .filled {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #000;
+    transition: all 0.3s ease-in-out;
+  }
+  .example-2 .icon-content a:hover .filled {
+    height: 100%;
+  }
+  
+  
+  .example-2 .icon-content a[data-social="instagram"] .filled,
+  .example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
+    background: linear-gradient(
+      45deg,
+      #405de6,
+      #5b51db,
+      #b33ab4,
+      #c135b4,
+      #e1306c,
+      #fd1f1f
+    );
+  }
+  .example-2 .icon-content a[data-social="youtube"] .filled,
+  .example-2 .icon-content a[data-social="youtube"] ~ .tooltip {
+    background-color: #ff0000;
+  }
+  
+
+
+
+
+

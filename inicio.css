@@ -1,0 +1,66 @@
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0; /* Remove qualquer margem padrão */
+}
+ 
+#slider {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+ 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 5s ease-in-out; /* Suaviza troca */
+}
+ 
+.elemento {
+    background-image: url('./imagens/logo.png'); /* Define a imagem como fundo */
+    background-size: cover; /* Ajusta a imagem ao elemento */
+    background-position: fixed; /* Centraliza a imagem */
+    transform: translate(-50%, -50%); /* Ajusta a posição */
+    position: fixed; /* Fixa o elemento em relação à viewport */
+    top: 50%; /* Posiciona no meio verticalmente */
+    left: 50%; /* Posiciona no meio horizontalmente */
+    display: block;
+    width: 600px; /* Tamanho inicial */
+    height: 450px;
+    transition: transform 0.9s ease; /* Adiciona uma transição suave */
+    cursor: pointer; /* Muda cursor para indicar que é clicável */
+    z-index: 1000; /* Garante que fique acima do slider */
+}
+ 
+.elemento:hover {
+    transform: scale(1.5) translate(-30%, -30%); /* Aumenta o tamanho e mantém a posição */
+}
+ 
+/* Estilos personalizados para o SweetAlert */
+.swal2-popup {
+    background: #1a1a1a !important;
+    border: 2px solid #e3e9e2 !important;
+    border-radius: 15px !important;
+}
+ 
+.swal2-title {
+    color: #c1c2c5 !important;
+    font-size: 24px !important;
+}
+ 
+.swal2-html-container {
+    color: #ffffff !important;
+    font-size: 16px !important;
+}
+ 
+.swal2-confirm {
+    background: linear-gradient(45deg, #8f00ee) !important;
+    border: none !important;
+    border-radius: 20px !important;
+    padding: 10px 30px !important;
+    font-weight: bold !important;
+}

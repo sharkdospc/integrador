@@ -1,0 +1,259 @@
+body {
+  background-color: black;
+background: url(./imagens/avatar.jpg);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-size: cover; /* Faz o fundo cobrir toda a tela */
+  background-repeat: no-repeat; /* Evita repetição da imagem */
+  background-position: center; /* Centraliza a imagem */
+  background-attachment: fixed; /* Mantém o fundo fixo ao rolar a página */
+  margin: 0; /* Remove margens da página */
+  padding: 0; /* Remove espaçamentos extras */
+  height: 100vh; /* Garante que o fundo tenha 100% da altura da viewport */
+  width: 100vw; /* Garante que o fundo tenha 100% da largura da viewport */
+  display: block;
+}
+
+#slider {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 3s ease-in-out; /* Suaviza troca */
+}
+
+
+.elemento {
+    left: 500px;
+    top: -1px;
+    width: 500px;
+    cursor: pointer;
+    transform: translate(-70%, 70%); /* Ajusta a posição inicial */
+    transition: transform 0.4s ease; /* Suaviza a animação aumentando o tempo */
+    position: fixed;
+      display: block;
+     
+  }
+  .elemento:hover {
+    transform: scale(1.5) translate(-30%, 60%); /* Mantém a posição vertical no "hover" */
+  }
+
+
+  .imagem-container {
+    position: fixed;
+    display: block;
+    width: 50vw;
+    height: 700vh;
+    max-width: 50vw; /* Garante que o tamanho não ultrapasse a área visível */
+    max-height: 70vh;
+    top: 10vh; /* Posição relativa à altura da tela */
+    left: 60vw; /* Posição relativa à largura da tela */
+    overflow: hidden;
+}
+
+.imagem-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+  
+  
+  .nota {
+    position: fixed;
+    display: block;
+    width: 150vw;
+    height: 200vh;
+    max-width: 150vw; /* Garante que o tamanho não ultrapasse a área visível */
+    max-height: 200vh;
+    top: 80vh; /* Posição relativa à altura da tela */
+    left: 75vw; /* Posição relativa à largura da tela */
+    overflow: hidden;
+    z-index: 5;
+
+  }
+
+  .example-2 {
+    z-index: 5;
+    position: fixed;
+    bottom: 5px; 
+    left: 20px; 
+    display: flex;
+    justify-content: center;
+}
+
+
+  .example-2 .icon-content {
+    margin: 0 10px;
+    position: relative;
+  }
+  .example-2 .icon-content .tooltip {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffff;
+    padding: 6px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+  .example-2 .icon-content:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    top: -50px;
+  }
+  .example-2 .icon-content a {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #ffffff;
+    background-color: #ffffff1d;
+    transition: all 0.3s ease-in-out;
+  }
+  .example-2 .icon-content a:hover {
+    box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+  }
+  .example-2 .icon-content a svg {
+    position: relative;
+    z-index: 1;
+    width: 20px;
+    height: 20px;
+  }
+  .example-2 .icon-content a:hover {
+    color: white;
+  }
+  .example-2 .icon-content a .filled {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #000;
+    transition: all 0.3s ease-in-out;
+  }
+  .example-2 .icon-content a:hover .filled {
+    height: 100%;
+  }
+  
+  
+  .example-2 .icon-content a[data-social="instagram"] .filled,
+  .example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
+    background: linear-gradient(
+      45deg,
+      #405de6,
+      #5b51db,
+      #b33ab4,
+      #c135b4,
+      #e1306c,
+      #fd1f1f
+    );
+  }
+  .example-2 .icon-content a[data-social="youtube"] .filled,
+  .example-2 .icon-content a[data-social="youtube"] ~ .tooltip {
+    background-color: #ff0000;
+  }
+  
+
+  .ull {
+    border-radius: 20px;
+    border: 1px solid #ff00a6;
+    box-shadow: 0 0 50px #ff00a638;
+    width: 300px;
+    background-color: #101010;
+    list-style-type: none; /* Remove as marcas de lista */
+    padding: 0;
+    position: absolute; /* Posiciona a lista no lado direito */
+    right: 30px; /* Alinha a lista com o lado direito da tela */
+    top: 60px; /* Ajusta a distância do topo */
+    color: #d44f89;
+    
+  }
+  
+  
+  
+  
+  .searchbar {
+    background-color: rgba(0, 0, 0, 0.137);
+    color: #d44f89;
+    padding: 10px;
+    font-size: 16px;
+    width: 300px;
+    border: 1px solid #ff00a6;
+    box-shadow:  0 0 50px #d44f897e;
+    border-radius: 5px;
+  
+    /* Posiciona no lado direito */
+    position: absolute;
+    right: 20px; /* Define distância da borda direita */
+    top: 20px; /* Define distância do topo */
+  }
+  
+  li {
+    margin: 5px 0;
+    cursor: pointer;
+    color: #d44f89;
+  }
+  
+  li:hover {
+      color: #ec9bbe;
+  }
+  
+  .luta {
+    top:20vh;
+    left: 00vw;
+    position: fixed;
+  width: 500vw; /* Largura total */
+  height: 100vh; /* Altura total */
+  z-index: 5;
+ 
+}
+.luta img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Garante que a imagem cubra tudo sem distorcer */
+}
+
+footer {
+  color: #ffffff92;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+  cursor:default;
+}
+
+ul {
+  list-style: none;
+}
+
+iframe {
+  position: fixed;
+    display: block;
+    width: 30vw;
+    height: 40vh;
+    max-width: 30vw; /* Garante que o tamanho não ultrapasse a área visível */
+    max-height: 40vh;
+    top: 50vh; /* Posição relativa à altura da tela */
+    left: 40vw; /* Posição relativa à largura da tela */
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 5;
+}
+
